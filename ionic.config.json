@@ -1,6 +1,8 @@
 {
   "name": "fed",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "32f03e7e"
 }

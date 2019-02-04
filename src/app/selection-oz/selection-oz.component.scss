@@ -1,0 +1,21 @@
+$color-opacity: .55;
+$color-boy: lightskyblue;
+$color-girl: pink;
+$color-boy-opaque: rgba(135, 206, 250, $color-opacity);
+$color-girl-opaque: rgba(255, 192, 203, $color-opacity);
+
+h3 {
+    background: $color-girl-opaque;
+    color: white;
+    text-align: center;
+    border: 1px solid $color-girl;
+    margin-top: 0;
+    padding: 10px 0;
+    border-radius: 10px;
+    font-size: 40px;
+
+    &.milli {
+        font-size: 26px;
+        padding: 18px 0;
+    }
+}

@@ -1,16 +1,32 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="secondary">
-      <ion-button>
-        Is
+    <ion-buttons slot="secondary" class="container--button">
+      <ion-button *ngFor="let child of user.currentChildren; let i = index;" [class]="child.gender" [class.active]="i === 1">
+        {{ child.shortname }}
       </ion-button>
-      <ion-button style="background: pink;color: #fff;height: 50px;width:50px;border-radius: 50%;">
-        Ch
+      <ion-button (click)="addChild()">
+        <ion-icon name="add"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <h1 class="font--time">3<span>h</span> 45<span>m</span></h1>
+  <ion-list>
+    <h2>Time Since Last Recorded Feeding:</h2>
+    <section class="container container--time">
+      <h1 class="font--tertiary font--time">3<span>h</span> 45<span>m</span></h1>
+    </section>
+    
+    <h2>Last Recorded Amount:</h2>
+    <section class="container container--amount">
+      <h1 class="font--tertiary font--amount">4<span>oz</span></h1>
+    </section>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="addFeeding()">
+      <ion-fab-button size="small">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </ion-list>
 </ion-content>
