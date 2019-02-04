@@ -25,14 +25,8 @@
     </ion-row>
   </ion-grid>
 
-  <h4 *ngIf="!is_ml" class="font--primary">
-    {{ amounts_oz }}
-    <span>oz</span>
-  </h4>
-  <h4 *ngIf="is_ml" class="font--primary">
-    {{ amounts_ml }}
-    <span>ml</span>
-  </h4>
+  <h4 *ngIf="!is_ml" class="font--primary">{{ amounts_oz }}<span>oz</span></h4>
+  <h4 *ngIf="is_ml" class="font--primary">{{ amounts_ml }}<span>ml</span></h4>
 
   <!-- <ion-grid>
   <h2>Recent Selections:</h2>
